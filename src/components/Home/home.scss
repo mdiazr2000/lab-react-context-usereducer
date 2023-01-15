@@ -1,0 +1,35 @@
+@use "src/styles/media_responsive_variables";
+
+@mixin home_global() {
+  display: flex;
+}
+
+@mixin productContainerGlobal() {
+  display: flex;
+
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.home {
+  @include home_global;
+}
+
+.productContainer {
+  @include productContainerGlobal;
+  width: 78%;
+}
+
+@media (max-width: media_responsive_variables.$tabletSize) {
+  .home {
+    @include home_global();
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .productContainer {
+    @include productContainerGlobal;
+    width: 100%;
+  }
+}

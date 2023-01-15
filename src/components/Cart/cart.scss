@@ -1,0 +1,38 @@
+@use "src/styles/media_responsive_variables";
+
+@mixin summary_filters() {
+  display: flex;
+}
+
+@mixin summary_product_container() {
+  display: flex;
+}
+
+.summary {
+  @include summary_filters();
+  width: 30%;
+}
+
+.summary-product-container {
+  @include summary_product_container;
+  width: 70%;
+}
+
+@media (max-width: media_responsive_variables.$tabletSize) {
+  .summary {
+    @include summary_filters();
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .filters .title,
+  .filters span {
+    padding-bottom: 0px;
+  }
+
+  .summary-product-container {
+    @include summary_product_container;
+    width: 100%;
+  }
+}

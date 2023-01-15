@@ -1,0 +1,69 @@
+@use "src/styles/global_styles";
+@use "src/styles/media_responsive";
+
+.navBar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: gray;
+  font-family: "Neucha", cursive;
+
+  .container_global {
+    .shoppingLabel {
+      color: white;
+      font-family: Arial;
+      font-size: 22px;
+      margin: 10px;
+
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+
+    .form_container {
+      display: flex;
+      margin: 10px;
+    }
+
+    .shoppingCart {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      span.badge {
+        background-color: transparent !important;
+      }
+
+      .cartitem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 20px;
+        margin-bottom: 20px;
+
+        .cartItemImg {
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .input {
+      @include global_styles.input_global;
+    }
+  }
+}
+
+.cartItemDetail {
+  display: flex;
+  flex: 1;
+  padding: 0 20px;
+  flex-direction: column;
+}
+
+@include media_responsive.for-tablet-size;
+@include media_responsive.for-laptop-size;

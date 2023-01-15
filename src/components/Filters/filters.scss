@@ -1,0 +1,34 @@
+@use "src/styles/media_responsive_variables";
+
+@mixin filters_global() {
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  display: flex;
+
+  .title {
+    font-size: 30px;
+  }
+
+  span {
+    padding-bottom: 20px;
+  }
+}
+
+.filters {
+  @include filters_global();
+  flex-direction: column;
+  width: 20%;
+  margin: 10px;
+  height: 86vh;
+}
+
+@media (max-width: media_responsive_variables.$tabletSize) {
+  .filters {
+    @include filters_global();
+    flex-direction: row;
+    width: 100%;
+    height: 20vh;
+    margin: 0px;
+  }
+}

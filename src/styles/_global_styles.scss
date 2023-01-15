@@ -1,0 +1,19 @@
+@mixin container_global() {
+  display: flex;
+  width: 100%;
+  margin: 10px;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+@mixin input_global() {
+  width: 100%;
+  border-radius: 5px;
+  font-size: 25px;
+  border: none;
+  transition: 0.2s;
+
+  &:focus {
+    outline: none;
+  }
+}

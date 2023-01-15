@@ -1,0 +1,18 @@
+@use "src/styles/global_styles";
+
+@mixin for-tablet-size($tabletSize: 700px) {
+  @media (max-width: $tabletSize) {
+    .container_global {
+      flex-direction: column;
+      @include global_styles.container_global;
+    }
+  }
+}
+
+@mixin for-laptop-size($tabletSize: 701px) {
+  @media (min-width: $tabletSize) {
+    .container_global {
+      @include global_styles.container_global;
+    }
+  }
+}
