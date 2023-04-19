@@ -34,6 +34,7 @@ interface ContextElementProps {
   children: ReactNode;
 }
 
+
 export const Context: React.FC<ContextElementProps> = ({ children }) => {
   const products = [...Array<Product>(20)].map(() => ({
     id: faker.datatype.uuid(),
